@@ -5,4 +5,5 @@
     <string name="hint_diaryEntry">How was your day?</string>
     <string name="button_addImage">Include an image</string>
     <string name="button_addEntry">Submit Entry</string>
+    <string name="select_entry_image">Select entry image</string>
 </resources>
