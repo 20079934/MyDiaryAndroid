@@ -29,7 +29,7 @@ class EntryActivity : AppCompatActivity() {
         toolbarAdd.title = "New Entry"
         setSupportActionBar(toolbarAdd)
 
-        textView.setText("Dear ${app.entries.getName()}")
+        textView.setText("Dear ${app.entries.getName()},")
 
         if(intent.hasExtra("entry_edit")) {
             edit = true
