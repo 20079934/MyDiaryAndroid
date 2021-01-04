@@ -83,7 +83,9 @@ class DiaryJSONStore : DiaryStore {
     override fun update(entry: EntryModel) {
         val foundEntry = findOne(entry.id)
         if (foundEntry != null) {
+            foundEntry.topic = entry.topic
             foundEntry.entry = entry.entry
+            foundEntry.image = entry.image
         }
         serializeEntries()
     }
