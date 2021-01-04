@@ -6,4 +6,9 @@
     <string name="button_addImage">Include an image</string>
     <string name="button_addEntry">Submit Entry</string>
     <string name="select_entry_image">Select entry image</string>
+    <string name="menu_new_entry">New Entry</string>
+    <string name="nav_header_image">Navigation Header</string>
+    <string name="nav_header_title">My Diary</string>
+    <string name="nav_header_subtitle">20079934</string>
+    <string name="menu_update_name">Rename Diary</string>
 </resources>
