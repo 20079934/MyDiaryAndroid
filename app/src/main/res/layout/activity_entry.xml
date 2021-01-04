@@ -38,7 +38,7 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/entryTitle"
+                    android:id="@+id/entryTopic"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_margin="8dp"
@@ -59,7 +59,7 @@
                     android:text="Dear Diary"/>
 
                 <EditText
-                    android:id="@+id/entryDescription"
+                    android:id="@+id/entryEntry"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_margin="8dp"

@@ -10,6 +10,8 @@
         android:roundIcon="@mipmap/mydiaryicon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyDiary">
+        <activity android:name=".activities.EntryActivity"></activity>
+        <activity android:name=".activities.DiaryRenameActivity"></activity>
         <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

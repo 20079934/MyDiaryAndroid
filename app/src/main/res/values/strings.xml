@@ -12,4 +12,9 @@
     <string name="nav_header_subtitle">20079934</string>
     <string name="menu_update_name">Rename Diary</string>
     <string name="menu_addEntry">Add Entry</string>
+    <string name="menu_remameDiary">Rename Diary</string>
+    <string name="button_changeImage">Change Image</string>
+    <string name="menu_invalidEntry">Please add an entry</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
 </resources>

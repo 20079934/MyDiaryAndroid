@@ -87,4 +87,9 @@ class DiaryJSONStore : DiaryStore {
     override fun getName(): String {
         return diaryName
     }
+
+    override fun remove(entry: EntryModel) {
+        entries.remove(entry)
+        serializeEntries()
+    }
 }

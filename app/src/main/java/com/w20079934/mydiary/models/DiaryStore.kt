@@ -8,4 +8,5 @@ interface DiaryStore {
     fun update(placemark: EntryModel)
     fun updateName(name: String)
     fun getName(): String
+    fun remove(entry: EntryModel)
 }

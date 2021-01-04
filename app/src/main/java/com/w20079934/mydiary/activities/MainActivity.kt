@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity(), EntryListener  {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.item_add -> startActivityForResult<EntryActivity>(0)
+            R.id.diaryRename -> startActivityForResult<DiaryRenameActivity>(0)
         }
         return super.onOptionsItemSelected(item)
     }
