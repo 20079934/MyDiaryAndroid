@@ -14,6 +14,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.startActivityForResult
 import org.w20079934.mydiaryapp.fx.models.EntryModel
+import java.time.LocalDate
 
 class MainActivity : AppCompatActivity(), EntryListener  {
 
@@ -41,7 +42,17 @@ class MainActivity : AppCompatActivity(), EntryListener  {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.item_add -> startActivityForResult<EntryActivity>(0)
+            R.id.item_add -> {
+                val currDate = LocalDate.now()
+                app.entries.findAll().forEach {
+                    //if same date
+                if(it.date.get("day")==currDate.dayOfMonth && it.date.get("month")==currDate.monthValue && it.date.get("year")==currDate.year) {
+                        onEntryClick(it)
+                        return super.onOptionsItemSelected(item)
+                    }
+                }
+                startActivityForResult<EntryActivity>(0)
+            }
             R.id.diaryRename -> startActivityForResult<DiaryRenameActivity>(0)
         }
         return super.onOptionsItemSelected(item)
