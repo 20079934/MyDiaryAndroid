@@ -1,4 +1,7 @@
 package com.w20079934.mydiary.activities
 
-class EntryActivity {
+import androidx.appcompat.app.AppCompatActivity
+
+class EntryActivity : AppCompatActivity() {
+
 }

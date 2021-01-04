@@ -11,4 +11,5 @@
     <string name="nav_header_title">My Diary</string>
     <string name="nav_header_subtitle">20079934</string>
     <string name="menu_update_name">Rename Diary</string>
+    <string name="menu_addEntry">Add Entry</string>
 </resources>

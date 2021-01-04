@@ -10,6 +10,7 @@ data class EntryModel (
         var date: LocalDate = LocalDate.now(),
         var topic: String = "",
         var entry: String = "",
+        var image: String = "",
 ): Parcelable {
     override fun toString(): String = topic
 }
