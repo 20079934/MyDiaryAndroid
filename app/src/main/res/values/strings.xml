@@ -17,4 +17,7 @@
     <string name="menu_invalidEntry">Please add an entry</string>
     <string name="delete">Delete</string>
     <string name="cancel">Cancel</string>
+    <string name="hint_diaryName">Name</string>
+    <string name="menu_emptyName">Please enter a name</string>
+    <string name="button_renameDiary">Submit Name</string>
 </resources>

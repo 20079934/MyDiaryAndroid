@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity(), EntryListener  {
 
         app = application as MainApp
 
-
         toolbar.title = "Hello ${app.entries.getName()}!"
         setSupportActionBar(toolbar)
 
@@ -65,6 +64,7 @@ class MainActivity : AppCompatActivity(), EntryListener  {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         loadEntries()
+        toolbar.title = "Hello ${app.entries.getName()}!"
         super.onActivityResult(requestCode, resultCode, data)
     }
     private fun loadEntries() {
