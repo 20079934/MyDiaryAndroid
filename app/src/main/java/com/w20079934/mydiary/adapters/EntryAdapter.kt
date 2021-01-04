@@ -35,8 +35,8 @@ class EntryAdapter constructor(private var entries: List<EntryModel>, private va
     class MainHolder constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(entry: EntryModel, listener: EntryListener) {
-            itemView.dayNumber.text = entry.topic
-            itemView.dayTopic.text = entry.date.toString()
+            itemView.dayNumber.text = "${entry.date.get("day")}-${entry.date.get("month")}-${entry.date.get("year")}"
+            itemView.dayTopic.text = entry.topic
             itemView.imageIcon.setImageBitmap(readImageFromPath(itemView.context,entry.image))
             itemView.setOnClickListener {listener.onEntryClick(entry)}
         }

@@ -84,6 +84,8 @@ class EntryActivity : AppCompatActivity() {
             }
             R.id.removeEntry -> {
                 app.entries.remove(entry);
+                setResult(AppCompatActivity.RESULT_OK)
+                finish()
             }
         }
         return super.onOptionsItemSelected(item)

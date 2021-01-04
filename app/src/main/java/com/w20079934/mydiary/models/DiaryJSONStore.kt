@@ -8,6 +8,9 @@ import com.w20079934.mydiary.helpers.exists
 import com.w20079934.mydiary.helpers.read
 import com.w20079934.mydiary.helpers.write
 import org.w20079934.mydiaryapp.fx.models.EntryModel
+import java.time.Instant.now
+import java.time.LocalDate
+import java.time.LocalDate.now
 import java.util.*
 
 val JSON_ENTRIES = "entries.json"
@@ -18,6 +21,11 @@ val JSON_NAME = "diary.json"
 
 fun generateRandomId(): Long {
     return Random().nextLong()
+}
+
+fun getTodaysDate(): Map<String, Int> {
+    val currDate = LocalDate.now()
+    return mapOf<String,Int>("year" to currDate.year, "month" to currDate.monthValue, "day" to currDate.dayOfMonth)
 }
 
 class DiaryJSONStore : DiaryStore {
@@ -62,6 +70,7 @@ class DiaryJSONStore : DiaryStore {
 
     override fun create(entry: EntryModel) {
         entry.id = generateRandomId()
+        entry.date = getTodaysDate()
         entries.add(entry)
         serializeEntries()
     }
